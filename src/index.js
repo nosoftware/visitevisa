@@ -32,6 +32,8 @@ import ProfilePage from "views/pages/ProfilePage.js";
 import ContactUspage from "views/pages/ContactUs.js";
 import GetVisapage from "views/pages/GetVisa.js";
 import GetVisaDetails from "views/pages/GetVisaDetails.js";
+import GetVisaFormpage from "views/pages/GetVisaform.js";
+
 
 ReactDOM.render(
   <BrowserRouter>
@@ -66,6 +68,10 @@ ReactDOM.render(
           path="/getvisadetails"
           render={(props) => <GetVisaDetails {...props} />}
         />
+        <Route
+          path="/getvisaform"
+          render={(props) => <GetVisaFormpage {...props} />}
+        />
         <Redirect to="/index" />
         <Redirect from="/" to="/index" />
       </Switch>
@@ -73,3 +79,4 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById("root")
 );
+
